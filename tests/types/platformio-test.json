@@ -1,0 +1,194 @@
+{
+  "$schema": "https://packageurl.org/schemas/purl-test.schema-0.1.json",
+  "tests": [
+    {
+      "description": "Parse test for PURL type: platformio with namespace, name and version",
+      "test_group": "base",
+      "test_type": "parse",
+      "input": "pkg:platformio/me-no-dev/asynctcp@1.1.1",
+      "expected_output": {
+        "type": "platformio",
+        "namespace": "me-no-dev",
+        "name": "asynctcp",
+        "version": "1.1.1",
+        "qualifiers": null,
+        "subpath": null
+      },
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Roundtrip test for PURL type: platformio",
+      "test_group": "base",
+      "test_type": "roundtrip",
+      "input": "pkg:platformio/me-no-dev/asynctcp@1.1.1",
+      "expected_output": "pkg:platformio/me-no-dev/asynctcp@1.1.1",
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Build test for PURL type: platformio",
+      "test_group": "base",
+      "test_type": "build",
+      "input": {
+        "type": "platformio",
+        "namespace": "me-no-dev",
+        "name": "asynctcp",
+        "version": "1.1.1",
+        "qualifiers": null,
+        "subpath": null
+      },
+      "expected_output": "pkg:platformio/me-no-dev/asynctcp@1.1.1",
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Parse test for PURL type: platformio - adafruit library",
+      "test_group": "base",
+      "test_type": "parse",
+      "input": "pkg:platformio/adafruit/adafruit_neopixel@1.12.0",
+      "expected_output": {
+        "type": "platformio",
+        "namespace": "adafruit",
+        "name": "adafruit_neopixel",
+        "version": "1.12.0",
+        "qualifiers": null,
+        "subpath": null
+      },
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Roundtrip test for PURL type: platformio - adafruit library",
+      "test_group": "base",
+      "test_type": "roundtrip",
+      "input": "pkg:platformio/adafruit/adafruit_neopixel@1.12.0",
+      "expected_output": "pkg:platformio/adafruit/adafruit_neopixel@1.12.0",
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Build test for PURL type: platformio - adafruit library",
+      "test_group": "base",
+      "test_type": "build",
+      "input": {
+        "type": "platformio",
+        "namespace": "adafruit",
+        "name": "adafruit_neopixel",
+        "version": "1.12.0",
+        "qualifiers": null,
+        "subpath": null
+      },
+      "expected_output": "pkg:platformio/adafruit/adafruit_neopixel@1.12.0",
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Parse test for PURL type: platformio with platform qualifier",
+      "test_group": "base",
+      "test_type": "parse",
+      "input": "pkg:platformio/espressif/arduino-esp32@3.0.0?platform=espressif32",
+      "expected_output": {
+        "type": "platformio",
+        "namespace": "espressif",
+        "name": "arduino-esp32",
+        "version": "3.0.0",
+        "qualifiers": {
+          "platform": "espressif32"
+        },
+        "subpath": null
+      },
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Roundtrip test for PURL type: platformio with platform qualifier",
+      "test_group": "base",
+      "test_type": "roundtrip",
+      "input": "pkg:platformio/espressif/arduino-esp32@3.0.0?platform=espressif32",
+      "expected_output": "pkg:platformio/espressif/arduino-esp32@3.0.0?platform=espressif32",
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Build test for PURL type: platformio with platform qualifier",
+      "test_group": "base",
+      "test_type": "build",
+      "input": {
+        "type": "platformio",
+        "namespace": "espressif",
+        "name": "arduino-esp32",
+        "version": "3.0.0",
+        "qualifiers": {
+          "platform": "espressif32"
+        },
+        "subpath": null
+      },
+      "expected_output": "pkg:platformio/espressif/arduino-esp32@3.0.0?platform=espressif32",
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Parse test for PURL type: platformio with framework qualifier",
+      "test_group": "advanced",
+      "test_type": "parse",
+      "input": "pkg:platformio/stm32duino/stm32core@2.0.0?framework=arduino",
+      "expected_output": {
+        "type": "platformio",
+        "namespace": "stm32duino",
+        "name": "stm32core",
+        "version": "2.0.0",
+        "qualifiers": {
+          "framework": "arduino"
+        },
+        "subpath": null
+      },
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Parse test for PURL type: platformio with multiple qualifiers",
+      "test_group": "advanced",
+      "test_type": "parse",
+      "input": "pkg:platformio/espressif/esp-idf@5.0.0?framework=espidf&platform=espressif32",
+      "expected_output": {
+        "type": "platformio",
+        "namespace": "espressif",
+        "name": "esp-idf",
+        "version": "5.0.0",
+        "qualifiers": {
+          "framework": "espidf",
+          "platform": "espressif32"
+        },
+        "subpath": null
+      },
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Roundtrip test for PURL type: platformio - case normalization",
+      "test_group": "advanced",
+      "test_type": "roundtrip",
+      "input": "pkg:platformio/Adafruit/Adafruit_NeoPixel@1.12.0",
+      "expected_output": "pkg:platformio/adafruit/adafruit_neopixel@1.12.0",
+      "expected_failure": false,
+      "expected_failure_reason": null
+    },
+    {
+      "description": "Parse test for PURL type: platformio without version",
+      "test_group": "advanced",
+      "test_type": "parse",
+      "input": "pkg:platformio/me-no-dev/asynctcp",
+      "expected_output": {
+        "type": "platformio",
+        "namespace": "me-no-dev",
+        "name": "asynctcp",
+        "version": null,
+        "qualifiers": null,
+        "subpath": null
+      },
+      "expected_failure": false,
+      "expected_failure_reason": null
+    }
+  ]
+}

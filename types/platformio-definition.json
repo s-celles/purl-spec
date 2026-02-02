@@ -1,0 +1,56 @@
+{
+  "$schema": "https://packageurl.org/schemas/purl-type-definition.schema-1.0.json",
+  "$id": "https://packageurl.org/types/platformio-definition.json",
+  "type": "platformio",
+  "type_name": "PlatformIO",
+  "description": "PlatformIO packages for embedded development, including libraries, platforms, and tools.",
+  "repository": {
+    "use_repository": true,
+    "default_repository_url": "https://registry.platformio.org/",
+    "note": "The default repository is the PlatformIO Registry at https://registry.platformio.org"
+  },
+  "namespace_definition": {
+    "requirement": "required",
+    "case_sensitive": false,
+    "native_name": "owner",
+    "note": "The namespace is the owner name of the library in the PlatformIO Registry. It must be lowercased in the canonical form."
+  },
+  "name_definition": {
+    "requirement": "required",
+    "case_sensitive": false,
+    "native_name": "name",
+    "note": "The name is the library identifier in the PlatformIO Registry. It must be lowercased in the canonical form."
+  },
+  "version_definition": {
+    "requirement": "optional",
+    "case_sensitive": true,
+    "native_name": "version",
+    "note": "The version is a semantic version string."
+  },
+  "qualifiers_definition": [
+    {
+      "key": "platform",
+      "description": "The target hardware platform (e.g., espressif32, ststm32, atmelavr, teensy).",
+      "native_name": "platform"
+    },
+    {
+      "key": "framework",
+      "description": "The target framework (e.g., arduino, espidf, stm32cube, zephyr).",
+      "native_name": "framework"
+    },
+    {
+      "key": "repository_url",
+      "description": "An alternative registry URL for private or self-hosted registries.",
+      "native_name": "repository_url"
+    }
+  ],
+  "reference_urls": [
+    "https://registry.platformio.org/",
+    "https://docs.platformio.org/en/latest/librarymanager/index.html"
+  ],
+  "examples": [
+    "pkg:platformio/me-no-dev/asynctcp@1.1.1",
+    "pkg:platformio/adafruit/adafruit_neopixel@1.12.0",
+    "pkg:platformio/espressif/arduino-esp32@3.0.0?platform=espressif32"
+  ]
+}
